@@ -1,22 +1,17 @@
-import React from 'react'
+import React from 'react';
 // import PropTypes from 'prop-types'
 // import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 
-export const IndexPageTemplate = () => (
-  <div>
-    Hello World
-  </div>
-)
+export const IndexPageTemplate = () => <div>Hello World</div>;
 
 const IndexPage = () => {
-
   return (
     <Layout>
-      <IndexPageTemplate/>
+      <IndexPageTemplate />
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
