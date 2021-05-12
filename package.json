@@ -38,12 +38,13 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "npm run develop",
+    "cms": "npx netlify-cms-proxy-server",
     "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier --config .prettierrc --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.3.0"
   }
 }
