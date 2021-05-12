@@ -7,6 +7,7 @@ backend:
     delete: 'Delete {{collection}} “{{slug}}”'
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
+local_backend: true
 
 media_folder: static/img
 public_folder: /img
@@ -20,7 +21,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "About Me Text", name: "text", widget: "text"}
-      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Order", name: "order", widget: "number", value_type: "int", min: 1, default: 1}
+      - {label: "Image", name: "about_image", widget: "image"}
   
   - name: "section"
     label: "Social Media Section"

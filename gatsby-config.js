@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Marta Maik Portfolio',
-    description:
-      'Marta\'s Maik Marketing portfolio with work showcase.',
+    description: "Marta's Maik Marketing portfolio with work showcase.",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -20,6 +19,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/sections`,
+        name: 'sections',
       },
     },
     {
@@ -74,4 +80,4 @@ module.exports = {
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
-}
+};
