@@ -1,7 +1,13 @@
 import { useState, useLayoutEffect } from 'react';
 
+let defaultWidth = 1920;
+
+if (typeof window !== 'undefined') {
+  defaultWidth = window.innerWidth;
+}
+
 const useWindowWidth = () => {
-  const [width, setWidth] = useState(window.innerWidth || 0);
+  const [width, setWidth] = useState(defaultWidth);
 
   useLayoutEffect(() => {
     if (typeof window === 'undefined') return;
