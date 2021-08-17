@@ -1,10 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import useSiteMetadata from './SiteMetadata';
+import useSiteMetadata from '../../hooks/useSiteMetadata';
 import { withPrefix } from 'gatsby';
+import '../../reset.css';
 
-const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+const PageWrapper = ({ children, page_metadata }) => {
+  const site_metadata = useSiteMetadata();
+  let title, description;
+
+  if (page_metadata) {
+    title = page_metadata.page_title;
+    description = page_metadata.page_description;
+  } else {
+    title = site_metadata.title;
+    description = site_metadata.description;
+  }
+
   return (
     <div>
       <Helmet>
@@ -45,9 +56,9 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <div>{children}</div>
+      <>{children}</>
     </div>
   );
 };
 
-export default TemplateWrapper;
+export default PageWrapper;
