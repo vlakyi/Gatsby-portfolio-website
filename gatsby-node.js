@@ -73,7 +73,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       footer_text,
     };
 
-    page_props.images?.forEach((image) => (image.image_id = uuid.v4()));
+    // es6 is not working during build on the netlify
+    page_props.images &&
+      page_props.images.forEach((image) => (image.image_id = uuid.v4()));
 
     const path = main_page ? '/' : page_props.page_route;
 
