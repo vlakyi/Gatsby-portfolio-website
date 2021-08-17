@@ -7,31 +7,80 @@ backend:
     delete: 'Delete {{collection}} “{{slug}}”'
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
-local_backend: true
+local_backend:
+  url: http://localhost:8081/api/v1
 
 media_folder: static/img
 public_folder: /img
 
+search: false;
+
 collections:
-  - name: "about"
-    label: "About"
-    folder: "src/sections/about/index.md"
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'content/pages/'
     create: true
+    slug: '{{slug}}'
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "About Me Text", name: "text", widget: "text"}
-      - {label: "Order", name: "order", widget: "number", value_type: "int", min: 1, default: 1}
-      - {label: "Image", name: "about_image", widget: "image"}
-  
-  - name: "section"
-    label: "Social Media Section"
-    folder: "src/sections/social-media"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "section"}
-      - {label: "Section Title", name: "title", widget: "string"}
-      - {label: "Section type", name: "type", widget: "select", options: [{label: "Grid", value: "grid"}, {label: "Carousel", value: "carousel"}], default: "grid"}
-      - {label: "Order", name: "order", widget: "number", value_type: "int", min: 1}
-      - {label: "Images", name: "images", widget: "list", fields: [{label: Image, name: image, widget: image}]}
+      - { label: 'Page Title', name: 'page_title', widget: 'string' }
+      - {
+          label: 'Page Description',
+          name: 'page_description',
+          widget: 'string',
+        }
+      - { label: 'Page Route', name: 'page_route', widget: 'string' }
+      - { label: 'Page Header', name: 'page_header', widget: 'string' }
+      - {
+          label: 'Main Page',
+          name: 'main_page',
+          widget: 'boolean',
+          default: false,
+        }
+      - {
+          label: 'Navigation Order',
+          name: 'navigation_order',
+          widget: 'number',
+          value_type: 'int',
+          min: 1,
+        }
+      - {
+          label: 'Page Color',
+          name: 'page_color',
+          widget: 'color',
+          enableAlpha: true,
+          default: '#FFF',
+        }
+      - {
+          label: 'Text color',
+          name: 'text_color',
+          widget: 'color',
+          default: '#000',
+        }
+      - {
+          label: 'Section type',
+          name: 'section_type',
+          widget: 'select',
+          options:
+            [
+              { label: 'Grid', value: 'grid' },
+              { label: 'Carousel', value: 'carousel' },
+            ],
+          default: 'grid',
+        }
+      - {
+          label: 'Images',
+          name: 'images',
+          widget: 'list',
+          min: 1,
+          fields:
+            [
+              { label: 'Image', name: 'image_src', widget: 'image' },
+              {
+                label: 'Alternative Text',
+                name: 'image_alt',
+                widget: 'text',
+                required: true,
+              },
+            ],
+        }
+      - { label: 'Footer Text', name: 'footer_text', widget: 'string' }
