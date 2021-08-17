@@ -5,6 +5,7 @@ export const StyledNavigationContainer = styled.nav`
   background-color: ${(props) => props.background_color || '#FFF'};
   position: sticky;
   top: 0;
+  z-index: 100;
 `;
 
 export const StyledListContainer = styled.ul`

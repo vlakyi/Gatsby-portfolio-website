@@ -53,14 +53,20 @@ const Navigation = (props) => {
     }
   );
 
+  const isSSR = typeof window === 'undefined';
+
   return (
-    <Suspense fallback={<Loader />}>
-      {isMobile ? (
-        <NavigationTemplateMobile {...props} navList={navList} />
-      ) : (
-        <NavigationTemplateDesktop {...props} navList={navList} />
+    <>
+      {!isSSR && (
+        <Suspense fallback={<Loader />}>
+          {isMobile ? (
+            <NavigationTemplateMobile {...props} navList={navList} />
+          ) : (
+            <NavigationTemplateDesktop {...props} navList={navList} />
+          )}
+        </Suspense>
       )}
-    </Suspense>
+    </>
   );
 };
 
