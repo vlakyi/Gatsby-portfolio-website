@@ -30,7 +30,7 @@ export const StyledTopContainer = styled.section`
 `;
 
 export const StyledHeader = styled.h3`
-  max-width: 17ch;
+  max-width: 16ch;
   font-size: 1.2rem;
   font-weight: bold;
   color: ${(props) => props.text_color || '#000'};
