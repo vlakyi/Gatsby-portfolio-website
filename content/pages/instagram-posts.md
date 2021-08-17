@@ -11,5 +11,15 @@ section_type: grid
 images:
   - image_src: /img/instagram-template-post.png
     image_alt: Health care post
+  - image_src: /img/instagram-template-post-1.png
+    image_alt: Peanut butter cups
+  - image_src: /img/instagram-template-post-2.png
+    image_alt: Macbook Pro
+  - image_src: /img/instagram-template-post-3.png
+    image_alt: Interior
+  - image_src: /img/instagram-template-post-4.png
+    image_alt: Fashion
+  - image_src: /img/instagram-template-post-5.png
+    image_alt: Beauty
 footer_text: Marta Maik Portfolio
 ---
