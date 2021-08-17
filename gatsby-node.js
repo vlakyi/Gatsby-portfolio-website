@@ -73,7 +73,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       footer_text,
     };
 
-    page_props.images.forEach((image) => (image.image_id = uuid.v4()));
+    page_props.images?.forEach((image) => (image.image_id = uuid.v4()));
 
     const path = main_page ? '/' : page_props.page_route;
 
