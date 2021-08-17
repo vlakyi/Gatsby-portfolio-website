@@ -20,7 +20,7 @@ collections:
     label: 'Pages'
     folder: 'content/pages/'
     create: true
-    slug: '{{slug}}'
+    slug: '{{page_title}}'
     fields:
       - { label: 'Page Title', name: 'page_title', widget: 'string' }
       - {
