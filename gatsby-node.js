@@ -16,7 +16,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
                       blurredOptions: { width: 100 }
                       placeholder: BLURRED
                       layout: CONSTRAINED
-                      width: 450
+                      width: 470
                       quality: 100
                     )
                   }
