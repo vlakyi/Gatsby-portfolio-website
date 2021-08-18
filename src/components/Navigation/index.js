@@ -57,7 +57,7 @@ const Navigation = (props) => {
 
   return (
     <>
-      {!isSSR && (
+      {!isSSR ? (
         <Suspense fallback={<Loader />}>
           {isMobile ? (
             <NavigationTemplateMobile {...props} navList={navList} />
@@ -65,6 +65,8 @@ const Navigation = (props) => {
             <NavigationTemplateDesktop {...props} navList={navList} />
           )}
         </Suspense>
+      ) : (
+        <NavigationTemplateDesktop {...props} navList={navList} />
       )}
     </>
   );

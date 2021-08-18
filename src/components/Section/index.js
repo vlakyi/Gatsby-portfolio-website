@@ -8,7 +8,14 @@ const Section = ({ text_color, section_type, images }) => {
       <StyledImagesContainer type={section_type}>
         {images?.map(({ image_src, image_alt, image_id }) => {
           const image = getImage(image_src);
-          return <GatsbyImage image={image} key={image_id} alt={image_alt} />;
+          return (
+            <GatsbyImage
+              objectFit='contain'
+              image={image}
+              key={image_id}
+              alt={image_alt}
+            />
+          );
         })}
       </StyledImagesContainer>
     </StyledSectionContainer>
