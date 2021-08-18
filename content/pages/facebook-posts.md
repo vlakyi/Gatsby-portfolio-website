@@ -13,7 +13,7 @@ images:
     image_alt: icecream post
   - image_src: /img/canvas-–-1.png
     image_alt: beauty facebook post
-  - image_src: /img/canvas.png
-    image_alt: icecream post
+  - image_src: /img/apka-interior-post.png
+    image_alt: interior post
 footer_text: Marta Maik Portfolio
 ---
