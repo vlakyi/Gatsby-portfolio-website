@@ -9,17 +9,17 @@ page_color: "#f1f1f1"
 text_color: "#000"
 section_type: grid
 images:
-  - image_src: /img/instagram-template-post.png
-    image_alt: Health care post
-  - image_src: /img/instagram-template-post-1.png
-    image_alt: Peanut butter cups
-  - image_src: /img/instagram-template-post-2.png
-    image_alt: Macbook Pro
-  - image_src: /img/instagram-template-post-3.png
-    image_alt: Interior
-  - image_src: /img/instagram-template-post-4.png
-    image_alt: Fashion
-  - image_src: /img/instagram-template-post-5.png
-    image_alt: Beauty
+  - image_src: /img/canvasnui.png
+    image_alt: medical post
+  - image_src: /img/njujhgfdfghjk.png
+    image_alt: peanut butter cups
+  - image_src: /img/canvasppppp.png
+    image_alt: macbook post
+  - image_src: /img/canvasjdjdjjd.png
+    image_alt: beauty post
+  - image_src: /img/canvaskjk.png
+    image_alt: interior post
+  - image_src: /img/canvasnnnnnnnjujuu.png
+    image_alt: silk dress post
 footer_text: Marta Maik Portfolio
 ---
