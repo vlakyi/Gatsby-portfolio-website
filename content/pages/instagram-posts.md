@@ -21,5 +21,7 @@ images:
     image_alt: interior post
   - image_src: /img/canvasnnnnnnnjujuu.png
     image_alt: silk dress post
+  - image_src: /img/jewellery-post.png
+    image_alt: jewellery post
 footer_text: Marta Maik Portfolio
 ---
