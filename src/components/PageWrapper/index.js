@@ -53,7 +53,7 @@ const PageWrapper = ({ children, page_metadata }) => {
         <meta property='og:url' content='/' />
         <meta
           property='og:image'
-          content={`${withPrefix('/')}img/og-image.jpg`}
+          content={`${withPrefix('/')}img/favicon.svg`}
         />
       </Helmet>
       <>{children}</>
