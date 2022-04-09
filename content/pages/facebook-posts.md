@@ -9,7 +9,7 @@ page_color: "#FFF"
 text_color: "#000"
 section_type: grid
 images:
-  - image_src: /img/canvas.png
+  - image_src: /img/1.png
     image_alt: icecream post
   - image_src: /img/canvas-–-1.png
     image_alt: beauty facebook post
